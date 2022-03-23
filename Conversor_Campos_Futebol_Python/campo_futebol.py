@@ -16,14 +16,14 @@ def mostrar_campo(tamanho=0.0):
 
 mostrar_campo()
 while True:
-    opcao = int(input('Digite a conversão desejada:\n1 - Hectares\n2 - Metros quadrados\n3 - Sair\n'))
-    if opcao == 1:
+    opcao = input('Digite a conversão desejada:\n1 - Hectares\n2 - Metros quadrados\n3 - Sair\n')
+    if opcao == '1':
         hectares = float(input('Quantidade de hectares: '))
         mostrar_campo(hectares * 0.71)
-    elif opcao == 2:
+    elif opcao == '2':
         metros = float(input('Tamanho em metros quadrados: '))
         mostrar_campo((metros / 10000) * 0.71)
-    elif opcao == 3:
+    elif opcao == '3':
         print('Encerrando...')
         sleep(0.7)
         break
