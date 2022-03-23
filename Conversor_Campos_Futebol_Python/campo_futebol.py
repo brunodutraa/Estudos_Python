@@ -4,7 +4,7 @@ def mostrar_campo(tamanho=0.0):
         sleep(0.6)
         print()
         print('', '_' * 19, '\n|___      |      ___|\n|_  |     |     |  _|')
-        print(f'|_|º|)  ( º )  (|º|_|   X {tamanho:.1f}')
+        print(f'|_|o|)  ( o )  (|o|_|   X {tamanho:.1f}')
         print('|___|     |     |___|\n|_________|_________|')
         sleep(1)
         print(f'EQUIVALENTE A {tamanho:.1f} CAMPOS DE FUTEBOL')
@@ -18,11 +18,17 @@ mostrar_campo()
 while True:
     opcao = input('Digite a conversão desejada:\n1 - Hectares\n2 - Metros quadrados\n3 - Sair\n')
     if opcao == '1':
-        hectares = float(input('Quantidade de hectares: '))
-        mostrar_campo(hectares * 0.71)
+        try:
+            hectares = float(input('Quantidade de hectares: '))
+            mostrar_campo(hectares * 0.71)
+        except:
+            print('Valor inválido.')
     elif opcao == '2':
-        metros = float(input('Tamanho em metros quadrados: '))
-        mostrar_campo((metros / 10000) * 0.71)
+        try:
+            metros = float(input('Tamanho em metros quadrados: '))
+            mostrar_campo((metros / 10000) * 0.71)
+        except:
+            print('Valor inválido.')
     elif opcao == '3':
         print('Encerrando...')
         sleep(0.7)
